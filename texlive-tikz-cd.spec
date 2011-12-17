@@ -1,11 +1,11 @@
-# revision 24370
+# revision 24828
 # category Package
 # catalog-ctan /graphics/pgf/contrib/tikz-cd
-# catalog-date 2011-10-23 20:08:22 +0200
+# catalog-date 2011-12-11 18:44:11 +0100
 # catalog-license lppl
-# catalog-version 0.2
+# catalog-version 0.2a
 Name:		texlive-tikz-cd
-Version:	0.2
+Version:	0.2a
 Release:	1
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The general-purpose drawing package TiKZ can be used to typeset
@@ -31,19 +29,19 @@ match closely the arrows present in the Computer Modern
 typeface.
 
 %pre
-    %_texmf_mktexlsr_pre
+    %{_sbindir}/texlive.post
 
 %post
-    %_texmf_mktexlsr_post
+    %{_sbindir}/texlive.post
 
 %preun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
+	%{_sbindir}/texlive.post
     fi
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
