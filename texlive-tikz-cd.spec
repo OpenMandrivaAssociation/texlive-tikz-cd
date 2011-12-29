@@ -28,16 +28,8 @@ settings. This package also includes an arrow tip library that
 match closely the arrows present in the Computer Modern
 typeface.
 
-%pre
-    %{_sbindir}/texlive.post
-
 %post
     %{_sbindir}/texlive.post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-    fi
 
 %postun
     if [ $1 -eq 0 ]; then
@@ -50,7 +42,6 @@ typeface.
 %doc %{_texmfdistdir}/doc/latex/tikz-cd/README
 %doc %{_texmfdistdir}/doc/latex/tikz-cd/tikz-cd-doc.pdf
 %doc %{_texmfdistdir}/doc/latex/tikz-cd/tikz-cd-doc.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -61,5 +52,3 @@ typeface.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
