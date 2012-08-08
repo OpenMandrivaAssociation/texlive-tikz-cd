@@ -1,11 +1,11 @@
-# revision 25687
+# revision 27194
 # category Package
 # catalog-ctan /graphics/pgf/contrib/tikz-cd
-# catalog-date 2012-03-18 16:49:09 +0100
+# catalog-date 2012-07-18 10:04:49 +0200
 # catalog-license lppl
-# catalog-version 0.2b
+# catalog-version 0.2c
 Name:		texlive-tikz-cd
-Version:	0.2b
+Version:	0.2c
 Release:	1
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
