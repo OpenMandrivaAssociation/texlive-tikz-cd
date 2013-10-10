@@ -1,11 +1,11 @@
-# revision 27414
+# revision 28695
 # category Package
 # catalog-ctan /graphics/pgf/contrib/tikz-cd
-# catalog-date 2012-08-16 00:25:02 +0200
+# catalog-date 2013-01-02 18:01:12 +0100
 # catalog-license lppl
-# catalog-version 0.3a
+# catalog-version 0.3c
 Name:		texlive-tikz-cd
-Version:	0.3a
+Version:	0.3c
 Release:	1
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
@@ -52,32 +52,3 @@ typeface.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Oct 30 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.3a-1
-+ Revision: 820861
-- Update to latest release.
-
-* Wed Aug 08 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.2c-1
-+ Revision: 812926
-- Update to latest release.
-
-* Tue Mar 27 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.2b-1
-+ Revision: 787805
-- Update to latest release.
-
-* Thu Jan 05 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.2a-2
-+ Revision: 756900
-- Rebuild to reduce used resources
-
-* Sat Dec 17 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.2a-1
-+ Revision: 743346
-- texlive-tikz-cd
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.2-1
-+ Revision: 719743
-- texlive-tikz-cd
-- texlive-tikz-cd
-- texlive-tikz-cd
-
