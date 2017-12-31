@@ -5,8 +5,8 @@
 # catalog-license gpl3
 # catalog-version 0.9b
 Name:		texlive-tikz-cd
-Version:	0.9b
-Release:	5
+Version:	0.9e
+Release:	1
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
