@@ -1,18 +1,12 @@
-# revision 33126
-# category Package
-# catalog-ctan /graphics/pgf/contrib/tikz-cd
-# catalog-date 2014-03-08 06:15:50 +0100
-# catalog-license gpl3
-# catalog-version 0.9b
 Name:		texlive-tikz-cd
-Version:	0.9e
-Release:	2
+Version:	59133
+Release:	1
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
 License:	GPL3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,24 +23,22 @@ match closely the arrows present in the Computer Modern
 typeface.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/tex/generic/tikz-cd/tikzlibrarycd.code.tex
-%{_texmfdistdir}/tex/latex/tikz-cd/tikz-cd.sty
-%doc %{_texmfdistdir}/doc/latex/tikz-cd/README
-%doc %{_texmfdistdir}/doc/latex/tikz-cd/tikz-cd-doc.pdf
-%doc %{_texmfdistdir}/doc/latex/tikz-cd/tikz-cd-doc.tex
+%{_texmfdistdir}/tex/generic/tikz-cd
+%{_texmfdistdir}/tex/latex/tikz-cd
+%doc %{_texmfdistdir}/doc/latex/tikz-cd
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
