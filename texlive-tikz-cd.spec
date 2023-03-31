@@ -1,6 +1,6 @@
 Name:		texlive-tikz-cd
 Version:	59133
-Release:	1
+Release:	2
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
