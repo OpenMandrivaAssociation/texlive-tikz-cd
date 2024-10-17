@@ -3,7 +3,7 @@ Version:	59133
 Release:	2
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
+URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
 License:	GPL3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.doc.r%{version}.tar.xz
