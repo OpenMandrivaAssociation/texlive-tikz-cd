@@ -1,47 +1,26 @@
-Name:		texlive-tikz-cd
-Version:	59133
-Release:	2
+%global tl_name tikz-cd
+%global tl_revision 77682
+
+Name:		texlive-%{tl_name}
+Epoch:		1
+Version:	1.0
+Release:	%{tl_revision}.1
 Summary:	Create commutative diagrams with TikZ
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/graphics/pgf/contrib/tikz-cd
-License:	GPL3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.doc.r%{version}.tar.xz
+License:	lppl1.3
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/tikz-cd.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
-BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+BuildSystem:	texlive
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-The general-purpose drawing package TiKZ can be used to typeset
+The general-purpose drawing package TikZ can be used to typeset
 commutative diagrams and other kinds of mathematical pictures,
-generating high-quality results. The purpose of this package is
-to make the process of creation of such diagrams easier by
-providing a convenient set of macros and reasonable default
-settings. This package also includes an arrow tip library that
-match closely the arrows present in the Computer Modern
-typeface.
+generating high-quality results. The purpose of this package is to make
+the process of creation of such diagrams easier by providing a
+convenient set of macros and reasonable default settings. This package
+also includes an arrow tip library that match closely the arrows present
+in the Computer Modern typeface.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/generic/tikz-cd
-%{_texmfdistdir}/tex/latex/tikz-cd
-%doc %{_texmfdistdir}/doc/latex/tikz-cd
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
